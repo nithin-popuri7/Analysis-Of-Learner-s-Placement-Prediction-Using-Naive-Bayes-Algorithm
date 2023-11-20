@@ -171,6 +171,88 @@ x_train,x_test, y_train, y_test = train_test_split(x_scaled,y,test_size=0.18, ra
 nbclassifier = GaussianNB() nbclassifier.fit(x_train, y_train) y_pred_nb = nbclassifier.predict(x_test) accuracy_score(y_test, y_pred_nb) nbclassifier.score(x_train, y_train) confusion_matrix(y_test, y_pred_nb)
 print(classification_report(y_test,y_pred_nb))
 ```
+# OUTPUT
+### HEAT MAP
+![HM](https://github.com/nithin-popuri7/Analysis-Of-Learner-s-Placement-Prediction-Using-Naive-Bayes-Algorithm/assets/94154780/d4c07547-b82c-4258-ba49-bbebd4b346af)
+
+### ACCURACY
+![A](https://github.com/nithin-popuri7/Analysis-Of-Learner-s-Placement-Prediction-Using-Naive-Bayes-Algorithm/assets/94154780/2de7aafe-4c55-43b6-9f89-99f0badd2348)
+
+### MATRIX
+![MATRIX](https://github.com/nithin-popuri7/Analysis-Of-Learner-s-Placement-Prediction-Using-Naive-Bayes-Algorithm/assets/94154780/316a032a-702c-4607-b2c8-548551b9eb85)
+
+### REPORT
+![CR](https://github.com/nithin-popuri7/Analysis-Of-Learner-s-Placement-Prediction-Using-Naive-Bayes-Algorithm/assets/94154780/84609db4-0b76-479c-82fc-bc886e3d4ab0)
+
+# CONCLUSION
+The Naïve Bayes model is validated with different performance metrics in which we took
+ 
+LogLoss as our primary metric to test performance. The loss function used in logistic regression and extensions such as neural networks is the negative log- likelihood of a logistic model that returns actual output predictions probabilities for its training data. After developing the model with better hyperparameters, we should validate it with other performance metrics. We can test model accuracy against training data with a performance metric accuracy score. Visualizing performance makes us understand the loose ends of the algorithm.
+The Student Placement Prediction model for university student evaluation using the Naive Bayes ML algorithm has been successfully developed with 85.72% accuracy. This NB model can be used to predict the placement of the student.
+
+# SUMMARY OF THE LITERATURE SURVEY
+![image](https://github.com/nithin-popuri7/Analysis-Of-Learner-s-Placement-Prediction-Using-Naive-Bayes-Algorithm/assets/94154780/a4977fd3-4512-428e-b466-f4c1c97742bd)
+![image](https://github.com/nithin-popuri7/Analysis-Of-Learner-s-Placement-Prediction-Using-Naive-Bayes-Algorithm/assets/94154780/2e1d487c-464e-4298-b248-ad968e8a8740)
+
+# OUTCOME OF THE LITERATURE SURVEY
+The outcome of this literature survey was to gain insights into the existing research and studies that utilized Naive Bayes for predicting learner's placement and to understand the outcomes of applying the algorithm.The survey begins by exploring various research articles, academic papers, and publications related to learner's placement prediction using the Naive Bayes algorithm. The researchers examine the methodologies, datasets, and evaluation techniques employed in these studies to assess the performance of the algorithm.The findings of the literature survey indicate that Naive Bayes has been widely used for learner's placement prediction due to its simplicity and effectiveness. The algorithm assumes independence between features, making it suitable for datasets with a large number of attributes.Many studies reported favorable outcomes when applying Naive Bayes for learner's placement prediction. The algorithm demonstrated good accuracy, precision, recall, and F1-score values, indicating its effectiveness in classifying learners into placement categories accurately.Additionally, Naive Bayes showcased robustness when dealing with noisy or incomplete data, which is often encountered in educational datasets.The algorithm's ability to handle missing values and imbalanced classes made it a popular choice for learner's placement prediction tasks.
+In conclusion, the literature survey reveals that Naive Bayes is a popular and effective algorithm for predicting learner's placement. While it has limitations in capturing complex relationships, its simplicity and robustness make it a valuable tool in the educational domain. Proper maintenance and updates are vital for ensuring the continued accuracy of Naive Bayes models in learner's placement prediction. Future research can focus on enhancing the algorithm's ability to handle complex relationships and developing maintenance strategies to further improve its predictive performance.
+
+# SCOPE OF THE SYSTEM
+The ML model we are building is used by universities where there is a need for students placement prediction based on their academic performance. Many ML Algorithms can solve this problem, but we adopt the Naive Bayes algorithm to predict student placement in this project, one of the better performing ML algorithms. Using source code and compatible software for machines makes it possible to make any pc to predict student placement, which helps educational management concentrate and focus on students who are predicted as Not Placed by an algorithm.
+
+# REFERENCE
+[1]. Laxmi Shanker Maurya;Md Shadab Hussain;Sarita Singh; (2021). Developing Classifiers 
+through Machine Learning Algorithms for Student Placement Prediction Based on Academic 
+Performance . Applied Artificial Intelligence, (), – . doi:10.1080/08839514.2021.1901032 
+
+[2]. Mahboob, K., Asif, R., & Haider, N. G. (2023). A data mining approach to forecast students’ 
+career placement probabilities and recommendations in the programming field. Mehran 
+University Research Journal Of Engineering & Technology, 42(2), 169–187. 
+https://search.informit.org/doi/10.3316/informit.002615895193590 
+
+[3]. Arini Aha Pekuwali 2020 IOP Conf. Ser.: Mater. Sci. Eng. 823 012056DOI
+10.1088/1757899X/823/1/012056 
+
+[4]. Moscoso-Zea, Oswaldo; Saa, Pablo; Luján-Mora, Sergio (2019). Evaluation of algorithms to 
+predict graduation rate in higher education institutions by applying educational data mining. 
+Australasian Journal of Engineering Education, (), 1–10. doi:10.1080/22054952.2019.1601063 
+
+[5]. International Journal of Scientific & Engineering Research Volume 2, Issue 8, August-2011 1 
+ISSN 2229-5518
+
+[6]. Rai, Kajal. "Students Placement Prediction Using Machine Learning Algorithms." South
+Asia Journal of Multidisciplinary Studies, vol. 8, no. 5, June 2022, pp. 57-63, ISSN: 2395-1079,.
+
+[7]. SAMRIDDHI: A Journal of Physical Sciences, Engineering and Technology
+Published Nov 30, 2020 DOI https://doi.org/10.18090/samriddhi.v12iS2.17
+
+[8]. International Journal of Research Studies in Computer Science and Engineering (IJRSCSE) 
+Volume 3, Issue 2, 2016, PP 10-14 ISSN 2349-4840 (Print) & ISSN 2349-4859 (Online) 
+www.arcjournals.org.
+
+[9]. Shukla, M. and Malviya, Anil Kumar, Modified Classification and Prediction Model for 
+Improving Accuracy of Student Placement Prediction (March 12, 2019). Proceedings of 2nd 
+International Conference on Advanced Computing and Software Engineering (ICACSE) 
+2019, Available at SSRN: https://ssrn.com/abstract=3351006 or http://dx.doi.org/10.2139/ssrn.3351006
+
+[10]. International Journal of Computer Applications (0975 – 8887) Volume 31– No.3, October 
+2011 40 A Generalized Data mining Framework for Placement Chance Prediction Problems 
+Sudheep Elayidom Associate Professor, CUSAT Kochi, 682022, India Sumam Mary Idikkula 
+Professor, CUSAT, Kochi, 682022, India Joseph Alexander Project officer, NODAL Center CUSAT, 
+Kochi, 682022, India.doi: available online at https://journals.edwin.co.in/index.php/esajms/issue/view/619
+3https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=1a70b7f0cda389b8a8d2c6 d5f17c87b630ba2a71 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
