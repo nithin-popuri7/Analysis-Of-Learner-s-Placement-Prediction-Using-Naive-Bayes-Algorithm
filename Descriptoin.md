@@ -92,6 +92,7 @@ The system architecture for placement prediction typically involves multiple com
 
 ![image](https://github.com/nithin-popuri7/Analysis-Of-Learner-s-Placement-Prediction-Using-Naive-Bayes-Algorithm/assets/94154780/ea4a4391-fb39-4566-bdd3-fa733c3b2d81)
 ## MODULE DESCRIPTION
+
 1.		Data Collection Module: Responsible for collecting relevant data about students from various sources, such as student databases, surveys, resumes, or online profiles.Handles data extraction and integration from different sources into a unified dataset.Ensures data quality and consistency.
    
 2.	Data Preprocessing Module:Performs data cleaning by handling missing values, removing duplicates, and addressing inconsistencies.Conducts data transformation and normalization to make it suitable for analysis.Applies feature scaling or encoding techniques to prepare categorical or numerical features for model training.
@@ -109,6 +110,67 @@ The system architecture for placement prediction typically involves multiple com
 8.	Deployment and Integration Module:Handles the deployment of the placement prediction system into a production environment.Integrates with other systems or platforms, such as student information systems or job portals, for seamless data exchange or interaction.Manages APIs or web services to enable external access and facilitate system integration.
    
 9.	Monitoring and Maintenance Module:Monitors the performance of the deployed model in real-time, tracking metrics like prediction accuracy or model drift.Conducts regular maintenance and updates to address bug fixes, performance improvements, or new feature incorporations.Supports model retraining with new data to maintain model relevance over time.
+# IMPLEMENTATION
+## CODE
+```
+import pandas as pd
+import matplotlib.pyplot as plt import seaborn as sns
+from sklearn.preprocessing import LabelEncoder from sklearn.preprocessing import StandardScaler from sklearn.model_selection import train_test_split from sklearn.linear_model import LogisticRegression from sklearn.naive_bayes import GaussianNB
+from sklearn import svm
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+
+dataset = pd.read_csv('./Placement_Data_Full_Class.csv') dataset.head()
+
+# as salary and sl_no columns are not required for placement status prediction so we drop it dataset.drop(['salary','sl_no'], axis=1, inplace=True)
+
+# missing values checking dataset.isnull().sum()
+
+# checking column values data type dataset.info()
+
+# label encoding needs to be done to ensure all values in the dataset is numeric
+# hsc_s, degree_t columns needs to be splitted into columns (get_dummies needs to be applied) features_to_split = ['hsc_s','degree_t']
+for feature in features_to_split:
+dummy = pd.get_dummies(dataset[feature])
+ 
+dataset = pd.concat([dataset, dummy], axis=1) dataset.drop(feature, axis=1, inplace=True)
+dataset
+
+dataset.rename(columns={"Others": "Other_Degree"},inplace=True) dataset
+
+encoder = LabelEncoder() # to encode string to the values like 0,1,2 etc. columns_to_encode = ['gender','ssc_b', 'hsc_b','workex','specialisation','status'] for column in columns_to_encode:
+dataset[column] = encoder.fit_transform(dataset[column]) dataset
+dataset.describe()
+
+fig, axs = plt.subplots(ncols=6,nrows=3,figsize=(20,10)) index = 0
+axs = axs.flatten()
+for k,v in dataset.items(): sns.boxplot(y=v, ax=axs[index]) index+=1
+
+fig.delaxes(axs[index])
+plt.tight_layout(pad=0.3, w_pad=0.5,h_pad = 4.5) # for styling by giving padding # deleting some outliers in 2 columns degree_p and hsc_p
+dataset = dataset[~(dataset['degree_p']>=90)] dataset = dataset[~(dataset['hsc_p']>=95)]
+
+dataset.corr()
+
+# heatmap for checking correlation or linearity plt.figure(figsize=(20,10)) sns.heatmap(dataset.corr().abs(), annot=True) dataset.shape
+
+# checking distributions of all features
+fig, axs = plt.subplots(ncols=6,nrows=3,figsize=(20,10)) index = 0
+axs = axs.flatten()
+for k,v in dataset.items(): sns.distplot(v, ax=axs[index])
+ 
+index+=1
+
+fig.delaxes(axs[index]) # deleting the 18th figure plt.tight_layout(pad=0.3, w_pad=0.2,h_pad = 4.5)
+
+x = dataset.loc[:,dataset.columns!='status'] # all features are used y = dataset.loc[:, 'status'] # label is status of placement
+x y
+sc= StandardScaler()
+x_scaled = sc.fit_transform(x) # for standardising the features x_scaled = pd.DataFrame(x_scaled)
+x_train,x_test, y_train, y_test = train_test_split(x_scaled,y,test_size=0.18, random_state=0)
+
+nbclassifier = GaussianNB() nbclassifier.fit(x_train, y_train) y_pred_nb = nbclassifier.predict(x_test) accuracy_score(y_test, y_pred_nb) nbclassifier.score(x_train, y_train) confusion_matrix(y_test, y_pred_nb)
+print(classification_report(y_test,y_pred_nb))
+```
 
 
 
