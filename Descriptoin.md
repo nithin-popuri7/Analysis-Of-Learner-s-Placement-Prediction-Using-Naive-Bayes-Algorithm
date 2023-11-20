@@ -1,1 +1,95 @@
+# ANALYSING LEARNER'S PLACEMENT PREDICTION USING NAIVE BAYES ALGORITHM
+## INTRODUCTION
+The majority of students in higher education enroll in an educational curriculumprogram to improve their chances of landing a good job. As a result, making an informed professional decision about where to work after completing a course is criticalin a student's life. One of the variables examined in establishing the institution's excellence is placement. The admissions rate to an educational institution is based on placements, which is a well-known truth worldwide. As a result, every institution workshard to improve student placement.
+
+In India, 1.5 million engineers graduate each year, according to data. The demand for qualified graduates in the IT business is increasing. However, most students are unaware of the importance of the IT business. The number of graduates who meet thecompany's requirements and quality standards is relatively low. An institute's placement cell and instructors should take the necessary procedures to generate a group of students that fit each company's needs. In each academic group, campus placement plays a critical role in assisting college students in achieving their objectives. Because of the enormous number of students, managing placement and education information in a large organization is difficult; differentiation and classification into distinct categories become tedious in this case. Before they leave college, every student hopes to find a job that they can do with their hands. 
+
+In this project, the Naive Bayes algorithm predicts student placement using factors such as gender, ssc_p, ssc_b, hsc_p, hsc_b, hsc_s degree_p, degree_t, workex, etest_p, specialization, mba_p, status. A placement probability predictor gives collegestudents an idea of where they stand and what they need to do to get a good job. Theinformation gained from this can help students better identify their weak areas and how to improve them. The transition from academia to the professional realm is a significant milestone for students, and optimizing this transition requires strategic planning and informed decision-making. A mini project focused on placement prediction serves as a valuable tool for both students and educational institutions to streamline and enhance the placement process.. By leveraging data analytics and machine learning techniques, this project aims to create a predictive model that can assess and predict a student's placement success based onhistorical data, academic performance, skills, and other relevant metrics.
+
+
+## PROBLEM STATEMENT
+The algorithm is chosen for its simplicity, effectiveness, and ability to handle categorical and numerical attributes. By leveraging attributes such as age, gender, educational background, work experience, technical skills, communication skills, and quantitative aptitude, a predictive model will be built to determine the placement status of new learners.The proposed solution aims to streamline the learner placement process by automating the evaluation of learners attributes and predicting their placement outcomes. This will enable educational institutions and career placement agencies to make informed decisions in a timely manner. Additionally, the Naive Bayes algorithm's assumption of feature independence makes it suitable for this analysis, allowing for efficient model training and prediction.
+
+## EXISTING SYSTEM
+Online Job Portals: Platforms like LinkedIn, Indeed, and Glassdoor serve as online job portals that connect job seekers with employers. These platforms allow employers to post job listings, and students can apply for those positions. These systems often include features like resume building, job search filters, and application tracking.
+Campus Placement Systems: Many educational institutions have their own placement systems specifically designed to streamline the placement process for their students. These systems enable employers to post job opportunities, schedule interviews, and interact with students. Students can access job listings, submit their resumes, and participate in recruitment events through these systems.
+ ## FLOW DIAGRAM
+![o](https://github.com/nithin-popuri7/Analysis-Of-Learner-s-Placement-Prediction-Using-Naive-Bayes-Algorithm/assets/94154780/90cb2e76-a804-4c02-8c8e-a5aa22b5a831)
+
+## PROPOSED SYSTEM METHODOLOGY
+### Data Collection: 
+Gather a comprehensive dataset that includes relevant information about students and their placement outcomes. This data may include academic performance, skill sets,
+internships or work experience, extracurricular activities, and any other relevant factors that could contribute to placement success.
+
+### Data Preprocessing: 
+Clean and preprocess the collected data. Handle missing values, remove irrelevant or redundant features, and convert categorical variables into numerical representations, if necessary. Additionally, perform exploratory data analysis to gain insights into the data and identify any patterns or correlations.
+
+### Feature Engineering: 
+Extract meaningful features from the available data that can contribute to placement predictions. This may involve transforming or combining existing features, creating new features based on domain knowledge, or utilizing feature selection techniques to identify the most relevant predictors.
+
+### Splitting the Dataset: 
+Divide the preprocessed data into training and testing/validation sets. The training set will be used for model training, while the testing/validation set will assess the model's performance and generalization ability.
+
+### Model Selection and Training: 
+Choose an appropriate machine learning algorithm for placement predictions. Commonly used algorithms for this task include logistic regression, decision trees, random forests, support vector machines (SVM), and gradient boosting methods. Train the selected model using the training data and tune its hyperparameters to optimize performance.
+
+### Model Evaluation: 
+Evaluate the trained model using the testing/validation set. Employ appropriate evaluation metrics such as accuracy, precision, recall, F1-score.
+# LITERATURE SURVEY
+### REFERENCE 01:
+This PDF file discusses the challenges of student placement in educational institutions and proposes a mechanism to prioritize academic performance parameters relevant for student placement through developed classifiers using machine learning algorithms. The study concludes that percentage in Tenth is the top priority followed by percentage in Twelve and Backlog in B Tech. The PDF also includes a detailed explanation of the results obtained through the experiment conducted and appropriate discussions required elaborating the highlights of the results. The study uses various classifiers and analyzes their accuracy, impact of MSE and Log Loss on classifier accuracy, and AUC-ROC Curve to compare the performance of different classifiers. The findings of this study can be applied to other fields beyond engineering institutions.
+
+### REFERENCE 02:
+This PDF file is a research article that explores the use of data mining to forecast students' career placement probabilities and recommendations in the programming field. The study focuses on critical perspectives of educational data mining, highlighting the strengths and weaknesses of present literature and imparting a unique contribution to this field. The article provides a literature analysis and a summary of approaches to data mining, followed by a description of the data, pre-processing, and methodology used in the research. The results and discussion are presented, and the final section provides a conclusion and addresses emerging directions for future endorsements. Overall, this research has important implications for educators and students in the programming field, providing valuable insights into career guidance and decision-making.
+
+### REFERENCE 03:
+The PDF file titled "Prediction of student learning outcomes using the Naive Bayesian Algorithm (Case Study of Tama Jagakarsa University)" by Arini Aha Pekuwali presents a case study exploring the potential of the Naive Bayesian Algorithm in predicting student performance. The study analyzes the algorithm's ability to predict final grades of students in the future based on their final grade data in the previous semester. The results of the study indicate that the Naive Bayesian Classifier algorithm successfully classifies data with an accuracy of 94.2446%. The study is useful for students to improve their grades, according to their predicted weaknesses through this research (wake-up calling). The paper provides valuable insights into the potential of the Naive Bayesian Algorithm in predicting student performance and can be used as a literature review for further research in this area.
+
+### REFERENCE 04:
+This PDF file from the Australasian Journal of Engineering Education evaluates the use of educational data mining to predict graduation rates in higher education institutions. The authors analyze data from 441 computer science engineering students at a university from 2002 to 2015 using various algorithms, including J48 and random tree. The results of the study can be used to identify at-risk students and implement strategies to improve academic indicators. However, the authors note that ethical and safe use of data must be considered in future research. Overall, this study provides valuable insights into the potential of educational data mining to improve student outcomes in higher education.
+
+### REFERENCE 05:
+This PDF file is a research paper published in the International Journal of Scientific and Engineering Research in August 2011. The paper explores the accuracy of various data mining techniques in predicting the performance of undergraduate computer science students. The study was conducted using a sample of 365 student records from the distance learning stream of Hellenic Open University, Greece. The authors applied five classification algorithms, including Decision Trees, Perceptron-based Learning, Bayesian Nets, Instance-Based Learning, and Rule-learning, to predict student performance. The paper provides a detailed analysis of the results obtained from each algorithm and concludes that Decision Trees and Instance-Based Learning were the most accurate in predicting student performance. The paper also discusses the relevant attributes chosen from the collected data and provides a literature review of related studies in the field.
+
+### REFERENCE 06:
+This PDF file discusses the use of machine learning algorithms to predict the likelihood of a student being placed in the IT industry based on their academic performance. The study compares the effectiveness of three models - Decision Tree, Random Forest, and Naïve Bayes - and concludes that these are the best-suited models for classification problems. The paper also presents a recommendation framework that forecasts the scholars to have one of the five placement statuses, namely, Dream Company, Core Company, Mass Recruiters, Not Eligible, and Not Interested in Placements. The model benefits the placement cell within an institute to recognize the potential students and advance their technical as well as social abilities. Overall, this study highlights the importance of accurate placement prediction for both students and academic institutions.
+
+### REFERENCE 07:
+This PDF file explores the use of machine learning techniques to predict the probability of undergraduate students getting placed. The paper presents an overview of various algorithms such as MLP, LMT, SMO, simple logistic, and logistic classifiers, and analyzes their accuracy in predicting student placement performance. The study also examines different matrices to determine which algorithm performs better and provides guidelines for improving student placement performance in education. Overall, this literature review provides valuable insights into the use of machine learning techniques for predicting student placement performance and can be useful for future research in this area.
+![R1](https://github.com/nithin-popuri7/Analysis-Of-Learner-s-Placement-Prediction-Using-Naive-Bayes-Algorithm/assets/94154780/0d0f5f0f-2663-4815-994c-0d6224368610)
+
+![R2](https://github.com/nithin-popuri7/Analysis-Of-Learner-s-Placement-Prediction-Using-Naive-Bayes-Algorithm/assets/94154780/40e51ae8-20ea-42b4-887a-d28a95391b92)
+
+# SYSTEM ANALYSIS AND DESIGN
+### HARDWARE REQUIREMENTS
+1.	Processor (CPU)
+2.	Storage
+3.	Network Connectivity
+
+### SOFTWARE REQUIREMENTS
+1.	Programming Language
+2.	Integrated Development Environment (IDE)
+
+# SYSTEM ARCHITECTURE
+The system architecture for placement prediction typically involves multiple components and layers that work together to process data, train the prediction model, and make accurate predictions. Here's a high-level overview of a typical system architecture for placement prediction
+ 
+
+1.	Data Collection and Storage: The system begins by collecting relevant data about students, including academic performance, skills, internships, and extracurricular activities. This data may come from various sources such as student databases, surveys, resumes, or online profiles. The collected data is then stored in a data storage system, such as a database or data warehouse.
+
+2.	Data Preprocessing: The collected data often requires preprocessing to ensure it is clean, consistent, and ready for analysis. Preprocessing steps may include handling missing values, data normalization or scaling, feature encoding or transformation, and removing outliers. This processed data is then used for model training and prediction.
+
+3.	Feature Engineering: Feature engineering involves extracting relevant features from the preprocessed data that can improve the predictive performance of the model. Domain knowledge and data analysis techniques are employed to create new features or transform existing ones. Feature engineering aims to capture the most informative aspects of the data that are likely to influence the placement outcome.
+
+4.	Model Training and Evaluation: The preprocessed data with engineered features is split into training and testing sets. The training set is used to train a machine learning model using a chosen algorithm (e.g., logistic regression, decision tree, random forest, or neural networks). The model learns patterns and relationships in the training data to make predictions. The trained model is then evaluated using the testing set to assess its accuracy, precision, recall, or other relevant metrics.
+
+5.	Model Deployment: Once the model is trained and evaluated, it is ready for deployment. The deployment phase involves integrating the model into the production environment, allowing it to make predictions on new, unseen data. This can be achieved by creating APIs or building a web application that interacts with the model.
+
+6.	User Interface (UI): A user interface is typically provided to allow users (e.g., administrators, career counselors, or students) to interact with the system. The UI may include features such as data input forms, visualization of predictions or performance metrics, and the ability to explore the underlying data.
+
+7.	Continuous Monitoring and Maintenance: The deployed model should be continuously monitored to ensure its performance remains optimal. Monitoring can involve tracking prediction accuracy, detecting concept drift, and periodically retraining the model with new data to maintain its relevance. Additionally, regular maintenance and updates may be required to address bug fixes, improve system performance, or incorporate new features.
+ 
+8.	Integration and APIs: The placement prediction system may need to integrate with other existing systems, such as student information systems or job portals. This integration allows seamless data exchange and facilitates the flow of information between different components.
+![image](https://github.com/nithin-popuri7/Analysis-Of-Learner-s-Placement-Prediction-Using-Naive-Bayes-Algorithm/assets/94154780/ea4a4391-fb39-4566-bdd3-fa733c3b2d81)
+
+
 
