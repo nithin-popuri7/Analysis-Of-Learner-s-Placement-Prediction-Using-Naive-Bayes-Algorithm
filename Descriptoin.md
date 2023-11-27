@@ -92,7 +92,6 @@ The system architecture for placement prediction typically involves multiple com
 
 ![image](https://github.com/nithin-popuri7/Analysis-Of-Learner-s-Placement-Prediction-Using-Naive-Bayes-Algorithm/assets/94154780/ea4a4391-fb39-4566-bdd3-fa733c3b2d81)
 ## MODULE DESCRIPTION
-
 1.		Data Collection Module: Responsible for collecting relevant data about students from various sources, such as student databases, surveys, resumes, or online profiles.Handles data extraction and integration from different sources into a unified dataset.Ensures data quality and consistency.
    
 2.	Data Preprocessing Module:Performs data cleaning by handling missing values, removing duplicates, and addressing inconsistencies.Conducts data transformation and normalization to make it suitable for analysis.Applies feature scaling or encoding techniques to prepare categorical or numerical features for model training.
