@@ -170,6 +170,16 @@ x_train,x_test, y_train, y_test = train_test_split(x_scaled,y,test_size=0.18, ra
 
 nbclassifier = GaussianNB() nbclassifier.fit(x_train, y_train) y_pred_nb = nbclassifier.predict(x_test) accuracy_score(y_test, y_pred_nb) nbclassifier.score(x_train, y_train) confusion_matrix(y_test, y_pred_nb)
 print(classification_report(y_test,y_pred_nb))
+
+### Using Naive Bayes Classifier - Gaussian Naive Bayes
+
+nbclassifier = GaussianNB() nbclassifier.fit(x_train, y_train) y_pred_nb = nbclassifier.predict(x_test) accuracy_score(y_test, y_pred_nb) nbclassifier.score(x_train, y_train) confusion_matrix(y_test, y_pred_nb)
+print(classification_report(y_test,y_pred_nb))
+
+### Using SVM Linear Kernel clf = svm.SVC(kernel="linear") clf.fit(x_train, y_train) y_pred_svm = clf.predict(x_test)
+
+accuracy_score(y_test, y_pred_svm) clf.score(x_train, y_train) confusion_matrix(y_test, y_pred_svm) print(classification_report(y_test, y_pred_svm))
+
 ```
 # OUTPUT
 ### HEAT MAP
